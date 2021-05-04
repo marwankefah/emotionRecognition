@@ -1,5 +1,4 @@
 import argparse
-from datetime import datetime
 
 import face_recognition
 import matplotlib.pyplot as plt
