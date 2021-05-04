@@ -14,12 +14,11 @@ if __name__ == '__main__':
     args = parser.parse_args()
     real, imag = hf.build_filters()
     #Path Of Trained Model
-    modelPath = "D:\\marwan\\Masters\\Bath\\emotionRecgonition\\model\\checkpoint.pth"
+    modelPath = "./modelcheckpoint.pth"
     # CSV file used to obtain the most important gabor features
-    path2 = "D:\\marwan\\Masters\\Bath\\emotionRecgonition\\a.csv"
+    path2 = "./model/a.csv"
 
-    imgPath = "D:\\marwan\\University\\2021Spring\\emotionRecognition\\check.jpg"
-    # imgPath=args.imgPath
+    imgPath=args.imgPath
     image = face_recognition.load_image_file(imgPath)
 
     face_locations = face_recognition.face_locations(image)
