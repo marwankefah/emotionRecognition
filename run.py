@@ -8,8 +8,9 @@ import src.Helper as hf
 
 if __name__ == '__main__':
     parser = argparse.ArgumentParser(description='Emotion Recognition')
-    parser.add_argument('--imgPath', dest='imgPath', help='image To Get Recognition For',
-                      action='store_true')
+    parser.add_argument("--imgPath",
+                        help="Image To get the Emotion Recognition For",
+                        type=str)
     args = parser.parse_args()
     real, imag = hf.build_filters()
     #Path Of Trained Model
@@ -17,8 +18,8 @@ if __name__ == '__main__':
     # CSV file used to obtain the most important gabor features
     path2 = "D:\\marwan\\Masters\\Bath\\emotionRecgonition\\a.csv"
 
-    imgPath = "D:\\marwan\\Masters\\Bath\\emotionRecgonition\\face.jpg"
-    # imgPath=args.path
+    # imgPath = "D:\\marwan\\Masters\\Bath\\emotionRecgonition\\face.jpg"
+    imgPath=args.imgPath
     image = face_recognition.load_image_file(imgPath)
 
     face_locations = face_recognition.face_locations(image)
