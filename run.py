@@ -14,7 +14,7 @@ if __name__ == '__main__':
     args = parser.parse_args()
     real, imag = hf.build_filters()
     #Path Of Trained Model
-    modelPath = "./modelcheckpoint.pth"
+    modelPath = "./model/checkpoint.pth"
     # CSV file used to obtain the most important gabor features
     path2 = "./model/a.csv"
 
