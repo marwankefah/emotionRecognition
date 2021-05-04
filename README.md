@@ -1,6 +1,4 @@
 # Emotion-Recognition
-[![Open In Colab](https://colab.research.google.com/assets/colab-badge.svg)](https://colab.research.google.com/drive/1L-3uNEHGHFoBTAOwaHQJF38L2Gv-nwvl?usp=sharing)
-
 
  Facial expression recognition system based on Improved Adaboost with Gabor Features.
 # Summary
