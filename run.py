@@ -11,6 +11,9 @@ if __name__ == '__main__':
     parser.add_argument("--imgPath",
                         help="Image To get the Emotion Recognition For",
                         type=str)
+    parser.add_argument("--outPath",
+                        help="Output Path to save the Image in",
+                        type=str)
     args = parser.parse_args()
     real, imag = hf.build_filters()
     #Path Of Trained Model
@@ -19,6 +22,7 @@ if __name__ == '__main__':
     path2 = "./model/a.csv"
 
     imgPath=args.imgPath
+    outPath=args.outPath
     image = face_recognition.load_image_file(imgPath)
 
     face_locations = face_recognition.face_locations(image)
@@ -36,5 +40,4 @@ if __name__ == '__main__':
                 horizontalalignment='left',
                 verticalalignment='top',fontsize=12)       # Add the patch to the Axes
         ax.add_patch(rect)
-    plt.savefig("result.jpg")
-    plt.show()
+    plt.savefig(outPath)
