@@ -12,6 +12,13 @@
 An Improved Adaboost Algorithm inspired from [Shen et al](https://link.springer.com/chapter/10.1007/11569947_6) to select best N features from Gabor Filters Bank that distinguish between Face (affectNet) / No Face (CIFAR-10) after balancing both datasets.  
 
 
+## Prerequisites
+ 
+- PyTorch 
+- torchvision 
+- NumPy
+- face_recognition package (For Detection (can be replaced with any detection Algorithm)
+
 
 ## Run For a single Image
 ```
